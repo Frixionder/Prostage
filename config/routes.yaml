@@ -1,3 +1,16 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+prostage_accueil:
+    path: /accueil
+    controller: App\Controller\ProstageController::index
+
+prostage_formations:
+    path: /formations
+    controller: App\Controller\ProstageController::formations
+
+prostage_entreprises:
+    path: /entreprises
+    controller: App\Controller\ProstageController::entreprises
+
+prostage_stages:
+    path: /stages
+    controller: App\Controller\ProstageController::stages
+
