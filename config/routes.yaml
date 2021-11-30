@@ -11,6 +11,6 @@ prostage_entreprises:
     controller: App\Controller\ProstageController::entreprises
 
 prostage_stages:
-    path: /stages
+    path: /stages/{id}
     controller: App\Controller\ProstageController::stages
 
