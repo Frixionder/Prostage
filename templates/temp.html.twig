@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="styleTemplate.css">
-    {% block title %}
-    <table width=100%>
-    <tbody>
-        <tr>
-            <td>
-                <a href="http://127.0.0.1:8000/accueil"> <span> Accueil </span> </a>
-            </td>
-            <td>
-                <a href="http://127.0.0.1:8000/formations"> <span> Choisir une formation </span>  </a>
-            </td>
-            <td>
-                <a href="http://127.0.0.1:8000/entreprises"> <span> Choisir une entreprise </span> </a>
-            </td>
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
 
-        </tr>
-    </tbody>
-    </table>
-    {% endblock %}
-    {% block body %} 
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   
+      {% block menu %}
+        <nav class="navbar navbar-light" style="background-color: #333333;">
+            <table width=100%>
+                <tbody>
+                    <tr>
+                        <td width = 33% >
+                            <a href="http://127.0.0.1:8000/accueil" class = link-primary> <span text-align:right> Accueil </span> </a>
+                        </td>
+                        <td width = 33%>
+                            <a href="http://127.0.0.1:8000/formations"> <span> Choisir une formation </span>  </a>
+                        </td>
+                        <td width = 33%>
+                            <a href="http://127.0.0.1:8000/entreprises"> <span> Choisir une entreprise </span> </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+
+     {% endblock %}
+
+
+     {% block body %} 
     
-    {% endblock %}
-    {% block footer %}
+     {% endblock %}
+     {% block footer %}
 
-    {% endblock %}
+      {% endblock %}
+    </body>
 </html>

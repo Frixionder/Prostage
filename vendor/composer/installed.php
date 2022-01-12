@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'v4.4.99',
-        'version' => '4.4.99.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
-        'name' => 'symfony/website-skeleton',
+        'reference' => '55a6b0ccc84c12b5249b0e1e50566f46f41dee81',
+        'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '55a6b0ccc84c12b5249b0e1e50566f46f41dee81',
+            'dev_requirement' => false,
+        ),
         'composer/package-versions-deprecated' => array(
             'pretty_version' => '1.11.99.4',
             'version' => '1.11.99.4',
@@ -180,6 +189,15 @@
             'aliases' => array(),
             'reference' => '006aa5d32f887a4db4353b13b5b5095613e0611f',
             'dev_requirement' => false,
+        ),
+        'fzaninotto/faker' => array(
+            'pretty_version' => 'v1.5.0',
+            'version' => '1.5.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fzaninotto/faker',
+            'aliases' => array(),
+            'reference' => 'd0190b156bcca848d401fb80f31f504f37141c8d',
+            'dev_requirement' => true,
         ),
         'laminas/laminas-code' => array(
             'pretty_version' => '4.4.3',
@@ -1243,15 +1261,6 @@
             'aliases' => array(),
             'reference' => '24227617a4ddbdf78f8ab12ce2b76dfb54a7d851',
             'dev_requirement' => true,
-        ),
-        'symfony/website-skeleton' => array(
-            'pretty_version' => 'v4.4.99',
-            'version' => '4.4.99.0',
-            'type' => 'project',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'reference' => NULL,
-            'dev_requirement' => false,
         ),
         'symfony/yaml' => array(
             'pretty_version' => 'v4.4.34',
