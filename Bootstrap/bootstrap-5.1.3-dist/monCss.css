@@ -1,0 +1,14 @@
+body{
+    padding-top:15px;
+}
+
+[class*=col-]
+{
+    text-align:center;
+    line-height: 35px;
+    color:white;
+    background-color: "#3498db";
+    border:2px solid "#2980b9";
+    border-radius: 6px;
+
+}
