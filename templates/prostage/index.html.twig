@@ -2,4 +2,21 @@
 {% block body %}
 <link rel="stylesheet" href="../styleTemplate.css">
 <h1 align=center>Bienvenue sur la page d'accueil de Prostages</h1>
+
+
+<p class="h5"> Stages : </p>
+<div>
+
+    {% for stageCourant in stages %}
+    <div align-item=left width=33%>
+    <ul>
+        <li>{{ stageCourant.titre }}</li>
+        <li>{{ stageCourant.entreprise.nom }}</li>
+        {%for formationStage in stageCourant.formations%}
+            <li>{{ formationStage.libelle }}</li>
+        {% endfor %}
+    </ul> 
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

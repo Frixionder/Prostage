@@ -89,7 +89,7 @@ class AppFixtures extends Fixture
             $stage->addFormation($formationAjoutee);
 
             /*Ajout de plusieurs formation pour un même stage*/
-            $nbDeFormations=$faker->numberBetween(0,count($listeFormations)-2);
+            $nbDeFormations=$faker->numberBetween(0,count($listeFormations)-count($listeFormations)/2);
 
             $listeFormationsAjoutees=array();
             for($j=0;$j<$nbDeFormations;$j++)
