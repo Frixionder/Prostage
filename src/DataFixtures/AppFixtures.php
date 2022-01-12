@@ -6,6 +6,8 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Stage;
 use App\Entity\Formation;
+use App\Entity\Entreprise;
+use Faker;
 
 class AppFixtures extends Fixture
 {
@@ -60,7 +62,7 @@ class AppFixtures extends Fixture
             $entreprise->setNom($nomEntreprise." ".$faker->companySuffix());
             $entreprise->setActivite($listeActivites[$faker->numberBetween(0,count($listeActivites)-1)]);
             $entreprise->setAdresse($faker->address());
-            $entreprise->setEmailContact($nomEntreprise."@".$nomEntreprise.".com");
+            $entreprise->setEmailContact("contact@".$nomEntreprise.".com");
             array_push($listeEntreprises,$entreprise);
             $manager->persist($entreprise);
         }
@@ -70,9 +72,18 @@ class AppFixtures extends Fixture
         /* Génération des stages */
         for($i=0;$i<100;$i++)
         {
+            $listeTitresStages=array("Stage Poterie",
+            "Atelier Pate à Modeler",
+            "Stage Jardinerie",
+            "Stage Programmation Objet",
+            "Stage Game Design",
+            "Stage Marathon",
+            "Stage E-Sport",
+            "Atelier Sieste",
+            "Stage Symphonie et Opera");
             $formationAjoutee=$listeFormations[$faker->numberBetween(0,count($listeFormations)-1)];
             $stage = new Stage();
-            $stage->setTitre($faker->jobTitle());
+            $stage->setTitre($listeTitresStages[$faker->numberBetween(0,count($listeTitresStages)-1)]);
             $stage->setDescMission($faker->catchPhrase());
             $stage->setEntreprise($listeEntreprises[$faker->numberBetween(0,count($listeEntreprises)-1)]);
             $stage->addFormation($formationAjoutee);
