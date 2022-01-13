@@ -20,12 +20,9 @@
                     <tr>
                         <div class="row">
                             <div class="col-md-6 col-xs-12">
-                                {# <td><a href="{{path('prostage_stagesParFormation', {id:formationCourante.id})}}">{{ stageCourant.titre }}</a></td> #}
+                                 <td><a href="{{path('prostage_stagesParEntreprise', {id_entreprise:entrepriseCourante.id})}}">{{ entrepriseCourante.nom }}</a></td>
                             </div>
 
-                            <div class="col-md-6 col-xs-12">
-                                <td>{{ entrepriseCourante.nom }}</td>
-                            </div>
                         </div>
                     </tr>
                 </tbody>

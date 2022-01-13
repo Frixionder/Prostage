@@ -36,10 +36,12 @@ class ProstageController extends AbstractController
         ]);
     }
 
-    public function stagesParEntreprise(): Response
+    public function stagesParEntreprise($id_entreprise): Response
     {
-        
-        return $this->render('prostage/stagesParEntreprise.html.twig');
+        $entreprise = $this->getDoctrine()->getRepository(Stage::class)->find($id_entreprise);
+        return $this->render('prostage/stagesParEntreprise.html.twig', [
+            'entrepriseCible'=>$entreprise
+        ]);
     }
 
     public function stagesParFormation(): Response

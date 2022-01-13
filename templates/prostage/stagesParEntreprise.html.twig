@@ -1,0 +1,20 @@
+{% extends 'temp.html.twig' %}
+{% block contenu %}
+
+    <div class="example-wrapper">
+        <h2>Voici les stages proposés par cette entreprise</h2>
+        <h5 style="color: #280af7; font-weight: bold;"> {{ entrepriseCible.nom }} </h5>
+        <div class="card">
+
+            <h5 style="color: #280af7; font-weight: bold;">Activité de l'entreprise</h5>
+            <pclass=police>{{ entrepriseCible.activite }}</p>
+
+            <h5 style="color: #280af7; font-weight: bold;">Liste des stages</h5>
+            {% for stagesEntreprise in entrpriseCible.stages %}
+                <pclass=police>{{ stagesEntreprise.titre }}</p>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
