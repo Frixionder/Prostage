@@ -9,6 +9,12 @@
             <h5 style="color: #280af7; font-weight: bold;">Activité de l'entreprise</h5>
             <pclass=police>{{ entrepriseCible.activite }}</p>
 
+            <h5 style="color: #280af7; font-weight: bold;">Adresse de l'entreprise</h5>
+            <pclass=police>{{ entrepriseCible.adresse }}</p>
+
+            <h5 style="color: #280af7; font-weight: bold;">Email de l'entreprise</h5>
+            <pclass=police>{{ entrepriseCible.emailContact }}</p>
+
             <h5 style="color: #280af7; font-weight: bold;">Liste des stages</h5>
             {% for stageEntreprise in entrepriseCible.stages %}
                 <td><a href="{{path('prostage_stages', {id:stageEntreprise.id})}}">{{ stageEntreprise.titre }}</a></td>

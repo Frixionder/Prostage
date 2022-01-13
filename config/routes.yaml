@@ -21,12 +21,3 @@ prostage_stagesParEntreprise:
 prostage_stagesParFormation:
     path: /formations/{id_formation}
     controller: App\Controller\ProstageController::stagesParFormation
-
-prostage_entrepriseProposantStage:
-    path: /entreprises/{id_stage}
-    controller: App\Controller\ProstageController::entrepriseProposantStage
-
-prostage_:
-    path: /formations/{id_stage}
-    controller: App\Controller\ProstageController::formationProposantStage
-

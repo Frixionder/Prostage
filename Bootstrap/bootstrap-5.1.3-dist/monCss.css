@@ -10,9 +10,12 @@ body{
     background-color: "#3498db";
     border:2px solid "#2980b9";
     border-radius: 6px;
-
 }
 
 .police{
     font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.logoSite{
+    align-items: center;
 }
