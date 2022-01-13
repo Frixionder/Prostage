@@ -1,5 +1,35 @@
 {% extends 'temp.html.twig' %}
-{% block body %}
-<link rel="stylesheet" href="../styleTemplate.css">
-<h1>Cette page affichera la liste des entreprises proposant un stage</h1>
+{% block contenu %}
+    <div class="example-wrapper">
+        <h2 style="color: #080044; font-weight: bold;">Bienvenue sur la page des entreprises de Prostage</h2>
+        <h5>Cette page vous permet de trouver un stage en filtrant selon l'entreprise de votre choix</h5>
+        
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <td style="font-weight: bold;">NOM</td>
+                        </div>
+                    </div>
+                </tr>
+            </thead>
+
+            {% for entrepriseCourante in entreprises %}
+                <tbody>
+                    <tr>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12">
+                                {# <td><a href="{{path('prostage_stagesParFormation', {id:formationCourante.id})}}">{{ stageCourant.titre }}</a></td> #}
+                            </div>
+
+                            <div class="col-md-6 col-xs-12">
+                                <td>{{ entrepriseCourante.nom }}</td>
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
 {% endblock %}

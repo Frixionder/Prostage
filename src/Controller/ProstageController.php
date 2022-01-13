@@ -32,7 +32,6 @@ class ProstageController extends AbstractController
     {
         $stage = $this->getDoctrine()->getRepository(Stage::class)->find($id);
         return $this->render('prostage/stages.html.twig', [ 
-            'id_stage' => $id,
             'stageCible'=>$stage
         ]);
     }
