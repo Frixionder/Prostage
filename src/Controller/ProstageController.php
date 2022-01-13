@@ -19,16 +19,45 @@ class ProstageController extends AbstractController
     }
     public function formations(): Response
     {
-        return $this->render('prostage/formations.html.twig');
+        $formations = $this->getDoctrine()->getRepository(Formation::class)->findAll();
+        return $this->render('prostage/formations.html.twig',['formations'=>$formations]);
     }
     public function entreprises(): Response
     {
-        return $this->render('prostage/entreprises.html.twig');
+        $entreprises = $this->getDoctrine()->getRepository(Entreprise::class)->findAll();
+        return $this->render('prostage/entreprises.html.twig',['entreprises'=>$entreprises]);
     }
+
     public function stages($id): Response
     {
+        $stage = $this->getDoctrine()->getRepository(Stage::class)->findBy(array('id'=>$id));
         return $this->render('prostage/stages.html.twig', [ 
-            'id_stage' => $id
+            'id_stage' => $id,
+            'stageCible'=>$stage
         ]);
+    }
+
+    public function stagesParEntreprise(): Response
+    {
+        
+        return $this->render('prostage/stagesParEntreprise.html.twig');
+    }
+
+    public function stagesParFormation(): Response
+    {
+        
+        return $this->render('prostage/stagesParFormation.html.twig');
+    }
+
+    public function entrepriseProposantStage(): Response
+    {
+        
+        return $this->render('prostage/entrepriseProposantStages.html.twig');
+    }
+
+    public function formationProposantStage(): Response
+    {
+        
+        return $this->render('prostage/formationProposantStage.html.twig');
     }
 }

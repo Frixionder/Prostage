@@ -1,5 +1,24 @@
 {% extends 'temp.html.twig' %}
-{% block body %}
-<link rel="stylesheet" href="../styleTemplate.css">
-<h1>Cette page affichera le descriptif du stage ayant pour identifiant {{ id_stage }} </h1>
+{% block contenu %}
+
+    <div class="example-wrapper">
+        <h2>Voici les informations sur le stage ayant pour id {{ stageCible.id }}</h2>
+        <h5 style="color: #280af7; font-weight: bold;"> {{ stageCible.titre }} </h5>
+        <div class="card">
+            <h5 style="color: #280af7; font-weight: bold;">Formation</h5>
+            {% for formationCourante in stageCible.formations %}
+                <pclass=police>{{ formationCourante.nomLong }}</p>
+            {% endfor %}
+
+            <h5 style="color: #280af7; font-weight: bold;">Nom de l'Entreprise</h5>
+            <p class=police>{{ stageCible.entreprise.nom }}</p>
+
+            <h5 style="color: #280af7; font-weight: bold;">Activité de l'entreprise</h5>
+            <pclass=police>{{ stageCible.entreprise.activite }}</p>
+
+            <h5 style="color: #280af7; font-weight: bold;">Descriptif de la mission</h5>
+            <pclass=police>{{ stageCible.descMission }}</p>
+        </div>
+    </div>
+
 {% endblock %}
