@@ -1,0 +1,18 @@
+{% extends 'temp.html.twig' %}
+{% block contenu %}
+
+    <div class="example-wrapper">
+        <h2>Voici les stages proposés pour cette formation</h2>
+        <h5 style="color: #280af7; font-weight: bold;"> {{ formationCible.libelle }} </h5>
+        <div class="card">
+
+            <h5 style="color: #280af7; font-weight: bold;">Liste des stages</h5>
+            {% for stageFormation in formationCible.stages %}
+                <td><a href="{{path('prostage_stages', {id:stageFormation.id})}}">{{ stageFormation.titre }}</a></td>
+                <br/>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
