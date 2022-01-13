@@ -30,7 +30,7 @@ class ProstageController extends AbstractController
 
     public function stages($id): Response
     {
-        $stage = $this->getDoctrine()->getRepository(Stage::class)->findBy(array('id'=>$id));
+        $stage = $this->getDoctrine()->getRepository(Stage::class)->find($id);
         return $this->render('prostage/stages.html.twig', [ 
             'id_stage' => $id,
             'stageCible'=>$stage
