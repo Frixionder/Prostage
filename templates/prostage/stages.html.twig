@@ -7,10 +7,12 @@
         <div class="card">
 
             <h5 style="color: #280af7; font-weight: bold;">Nom de l'Entreprise</h5>
-            <p class=police>{{ stageCible.entreprise.nom }}</p>
+            <td><a href="{{path('prostage_stagesParEntreprise', {id_entreprise:stageCible.entreprise.id})}}">{{ stageCible.entreprise.nom }}</a></td>
+
 
             <h5 style="color: #280af7; font-weight: bold;">Formation</h5>
             {% for formationCourante in stageCible.formations %}
+                {# Faire route tri #}
                 <pclass=police>{{ formationCourante.libelle }}</p>
             {% endfor %}
 

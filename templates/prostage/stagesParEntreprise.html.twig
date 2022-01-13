@@ -10,8 +10,9 @@
             <pclass=police>{{ entrepriseCible.activite }}</p>
 
             <h5 style="color: #280af7; font-weight: bold;">Liste des stages</h5>
-            {% for stagesEntreprise in entrpriseCible.stages %}
-                <pclass=police>{{ stagesEntreprise.titre }}</p>
+            {% for stageEntreprise in entrepriseCible.stages %}
+                <td><a href="{{path('prostage_stages', {id:stageEntreprise.id})}}">{{ stageEntreprise.titre }}</a></td>
+                <br/>
             {% endfor %}
 
         </div>
