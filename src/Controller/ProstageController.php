@@ -46,11 +46,20 @@ class ProstageController extends AbstractController
         ]);
     }
 
+    /*  Ancienne Fonction
     public function stagesParFormation($id_formation, FormationRepository $formationRepository): Response
     {
         $formation = $formationRepository->find($id_formation);
         return $this->render('prostage/stagesParFormation.html.twig' , [
             'formationCible'=>$formation
         ]);
+    }
+    */
+
+    public function stagesParEntreprise2($nom_entreprise): Response
+    {
+        $stages = $this->getDoctrine()->getRepository(Stage::class)->findStageParEntreprise($nom_entreprise);
+        return $this->render('prostage/stagesParEntreprise2.html.twig' , [
+            'nom_entreprise'=> $nom_entreprise]);
     }
 }
