@@ -28,12 +28,16 @@
     <nav class="navbar navbar-light" style="background-color: #333333;">
         <div class="row">
             {% block menu %}
-                <div class="col-md-6 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <a href="{{path('prostage_entreprises')}}" style="color: #0bbcf7">Filtrer par entreprise</a>
                 </div>
 
-                <div class="col-md-6 col-xs-12">
+                <div class="col-md-4 col-xs-12">
                     <a href="{{path('prostage_formations')}}" style="color: #0bbcf7">Filtrer par formation</a>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <a href="{{path('prostage_formulaireEntreprise')}}" style="color: #0bbcf7">Ajouter une entreprise</a>
                 </div>
             {% endblock %}
         </div>
@@ -60,7 +64,7 @@
                 </div>
 
                 <p>Site réalisé avec les frameworks <a href="https://symfony.com/" style="color: white">Symfony</a> et <a href="https://getbootstrap.com/" style="color: white">Bootstrap</p>
-                <p>Génération des données avec la librarie PHP <a href="https://fakerphp.github.io/" style = "color: white">Faker</a>
+                <p>Génération des données avec la librarie PHP <a href="https://fakerphp.github.io/" style = "color: white">Faker</a></p>
             {% endblock %}
         </div>
     </div>

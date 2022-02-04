@@ -11,6 +11,12 @@ use App\Entity\Entreprise;
 use App\Repository\EntrepriseRepository;
 use App\Repository\FormationRepository;
 use App\Repository\StageRepository;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
+
 
 class ProstageController extends AbstractController
 {
@@ -67,9 +73,9 @@ class ProstageController extends AbstractController
     {
         $entreprise = new Entreprise();
         $formulaireEntreprise = $this->createFormBuilder($entreprise)
-        ->add('activite')
-        ->add('adresse')
-        ->add('nom')
+        ->add('activite', TextareaType::class)
+        ->add('adresse', TextareaType::class)
+        ->add('nom', TextType::class)
         ->add('emailContact')
         ->getForm();
         $vueFormulaire = $formulaireEntreprise->createView();
