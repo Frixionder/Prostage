@@ -62,4 +62,18 @@ class ProstageController extends AbstractController
         return $this->render('prostage/stagesParEntreprise2.html.twig' , [
             'nom_entreprise'=> $nom_entreprise]);
     }
+
+    public function formulaireEntreprise(): Response
+    {
+        $entreprise = new Entreprise();
+        $formulaireEntreprise = $this->createFormBuilder($entreprise)
+        ->add('activite')
+        ->add('adresse')
+        ->add('nom')
+        ->add('emailContact')
+        ->getForm();
+        $vueFormulaire = $formulaireEntreprise->createView();
+
+        return $this->render('prostage/formulaireEntreprise.html.twig',['vueFormulaire'=>$vueFormulaire]);
+    }
 }

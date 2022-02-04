@@ -25,3 +25,7 @@ prostage_stagesParFormation:
 prostage_stagesParEntreprise2:
     path: /entreprises/{nom_entreprise}
     controller: App\Controller\ProstageController::stagesParEntreprise2
+
+prostage_formulaireEntreprise:
+    path: /formulaireEntreprise
+    controller: App\Controller\ProstageController::formulaireEntreprise
